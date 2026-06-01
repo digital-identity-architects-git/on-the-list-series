@@ -3,8 +3,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>On the List — News</title>
-    <link>https://onthelistseries.com/news/</link>
-    <atom:link href="https://onthelistseries.com/news/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://on-the-list-series.com/news/</link>
+    <atom:link href="https://on-the-list-series.com/news/feed.xml" rel="self" type="application/rss+xml" />
     <description>Official announcements about the On the List series.</description>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 May 2026 09:00:00 -0500</lastBuildDate>
@@ -12,8 +12,8 @@
 
     <item>
       <title>On the List: Book One Sets Its Release Date</title>
-      <link>https://onthelistseries.com/news/book-one-release-date.html</link>
-      <guid isPermaLink="true">https://onthelistseries.com/news/book-one-release-date.html</guid>
+      <link>https://on-the-list-series.com/news/book-one-release-date.html</link>
+      <guid isPermaLink="true">https://on-the-list-series.com/news/book-one-release-date.html</guid>
       <pubDate>Sat, 30 May 2026 09:00:00 -0500</pubDate>
       <description>On the List: Book One by Eric Brister will publish October 6, 2026, with a cover reveal and a free Chapter One preview.</description>
     </item>

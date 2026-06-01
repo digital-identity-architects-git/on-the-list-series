@@ -2,31 +2,31 @@
 <!-- Static / evergreen pages -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://onthelistseries.com/</loc>
+    <loc>https://on-the-list-series.com/</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onthelistseries.com/pages/about.html</loc>
+    <loc>https://on-the-list-series.com/pages/about.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://onthelistseries.com/pages/contact.html</loc>
+    <loc>https://on-the-list-series.com/pages/contact.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://onthelistseries.com/lyrics/</loc>
+    <loc>https://on-the-list-series.com/lyrics/</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://onthelistseries.com/lyrics/no-handle-on-the-outside.html</loc>
+    <loc>https://on-the-list-series.com/lyrics/no-handle-on-the-outside.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

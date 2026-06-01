@@ -1,0 +1,34 @@
+name: Deploy to SiteGround
+
+# Pushes the static site straight onto the live SiteGround hosting over SFTP
+# whenever main changes. Configure the secrets/vars below once (see README),
+# then deployment is fully automatic.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: siteground-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload site over SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
+        with:
+          server: ${{ secrets.SITEGROUND_HOST }}
+          username: ${{ secrets.SITEGROUND_USERNAME }}
+          password: ${{ secrets.SITEGROUND_PASSWORD }}
+          port: ${{ vars.SITEGROUND_PORT || '18765' }}
+          # Everything except repo/dev files goes to the web root.
+          local_path: './*'
+          remote_path: ${{ vars.SITEGROUND_REMOTE_PATH || 'public_html' }}
+          sftp_only: true
+          exclude: '.git/**,.github/**,README.md'

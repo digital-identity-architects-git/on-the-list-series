@@ -2,19 +2,19 @@
 <!-- Sitemap index: ties together the pages, blog, news, and books sitemaps. -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://onthelistseries.com/sitemap-pages.xml</loc>
+    <loc>https://on-the-list-series.com/sitemap-pages.xml</loc>
     <lastmod>2026-06-01</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://onthelistseries.com/sitemap-books.xml</loc>
+    <loc>https://on-the-list-series.com/sitemap-books.xml</loc>
     <lastmod>2026-06-01</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://onthelistseries.com/sitemap-blog.xml</loc>
+    <loc>https://on-the-list-series.com/sitemap-blog.xml</loc>
     <lastmod>2026-06-01</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://onthelistseries.com/sitemap-news.xml</loc>
+    <loc>https://on-the-list-series.com/sitemap-news.xml</loc>
     <lastmod>2026-06-01</lastmod>
   </sitemap>
 </sitemapindex>
