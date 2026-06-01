@@ -3,8 +3,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>On the List Series</title>
-    <link>https://onthelistseries.com/</link>
-    <atom:link href="https://onthelistseries.com/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://on-the-list-series.com/</link>
+    <atom:link href="https://on-the-list-series.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Books, journal, and news from the On the List series by Eric Brister.</description>
     <language>en-us</language>
     <copyright>Copyright 2026 On the List Series</copyright>
@@ -13,8 +13,8 @@
 
     <item>
       <title>On the List: Book One Sets Its Release Date</title>
-      <link>https://onthelistseries.com/news/book-one-release-date.html</link>
-      <guid isPermaLink="true">https://onthelistseries.com/news/book-one-release-date.html</guid>
+      <link>https://on-the-list-series.com/news/book-one-release-date.html</link>
+      <guid isPermaLink="true">https://on-the-list-series.com/news/book-one-release-date.html</guid>
       <category>News</category>
       <pubDate>Sat, 30 May 2026 09:00:00 -0500</pubDate>
       <description>On the List: Book One by Eric Brister will publish October 6, 2026, with a cover reveal and a free Chapter One preview.</description>
@@ -22,8 +22,8 @@
 
     <item>
       <title>Writing the Night the Door Opens</title>
-      <link>https://onthelistseries.com/blog/writing-the-door-scene.html</link>
-      <guid isPermaLink="true">https://onthelistseries.com/blog/writing-the-door-scene.html</guid>
+      <link>https://on-the-list-series.com/blog/writing-the-door-scene.html</link>
+      <guid isPermaLink="true">https://on-the-list-series.com/blog/writing-the-door-scene.html</guid>
       <category>Journal</category>
       <pubDate>Thu, 28 May 2026 09:00:00 -0500</pubDate>
       <description>A behind-the-scenes look at drafting the opening chapter of On the List: Book One.</description>

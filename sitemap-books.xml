@@ -2,19 +2,19 @@
 <!-- Books + chapter pages -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://onthelistseries.com/books/</loc>
+    <loc>https://on-the-list-series.com/books/</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://onthelistseries.com/books/on-the-list-book-one.html</loc>
+    <loc>https://on-the-list-series.com/books/on-the-list-book-one.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://onthelistseries.com/books/chapter-1.html</loc>
+    <loc>https://on-the-list-series.com/books/chapter-1.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

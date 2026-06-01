@@ -77,15 +77,15 @@ Add a new `<item>` at the **top** of the channel when you publish, and update
 `<lastBuildDate>`. `pubDate` uses RFC-822 dates (e.g. `Sat, 30 May 2026
 09:00:00 -0500`).
 
-## ⚠️ One config step: set your domain
+## Domain
 
-Every canonical URL, sitemap `<loc>`, and schema `@id` uses the placeholder
-**`https://onthelistseries.com`**. Find-and-replace it with your real domain
-before going live:
+The live domain is **`https://on-the-list-series.com`**. Every canonical URL,
+sitemap `<loc>`, schema `@id`, and contact email is set to it. If the domain
+ever changes, find-and-replace it everywhere:
 
 ```bash
-grep -rl "onthelistseries.com" . --include="*.html" --include="*.xml" \
-  | xargs sed -i 's#https://onthelistseries.com#https://YOURDOMAIN.com#g'
+grep -rl "on-the-list-series.com" . \
+  | xargs sed -i 's#on-the-list-series\.com#NEWDOMAIN.com#g'
 ```
 
 ## Google News sitemap note
@@ -96,7 +96,7 @@ be valid for Google News. Prune older `<url>` entries as you publish new ones.
 ## Submitting sitemaps
 
 Submit only the index — Google reads the rest from it:
-`https://YOURDOMAIN.com/sitemap.xml` in Google Search Console.
+`https://on-the-list-series.com/sitemap.xml` in Google Search Console.
 
 ## Deploying (auto-deploy to SiteGround)
 
@@ -128,7 +128,7 @@ defaults are wrong) — add:
 
 Then push to `main` (or run the workflow from the **Actions** tab). The site
 deploys to the domain root, where the root-relative links (`/assets/...`,
-`/books/...`) and the `https://onthelistseries.com` canonical URLs resolve
+`/books/...`) and the `https://on-the-list-series.com` canonical URLs resolve
 correctly.
 
 > **First run:** if SiteGround's placeholder still shows after deploy, delete the

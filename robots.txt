@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://onthelistseries.com/sitemap.xml
+Sitemap: https://on-the-list-series.com/sitemap.xml
