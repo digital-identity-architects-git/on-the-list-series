@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>On the List — A Series by Eric Brister</title>
+  <meta name="description" content="On the List is a series of novels about ambition, secrets, and the price of getting your name through the door. Read the story, flip through Chapter One, and explore the books, lyrics, and journal." />
+  <link rel="canonical" href="https://onthelistseries.com/" />
+  <link rel="alternate" type="application/rss+xml" title="On the List Series" href="https://onthelistseries.com/feed.xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="On the List — A Series by Eric Brister" />
+  <meta property="og:description" content="Ambition, secrets, and the price of getting your name through the door. Flip through Chapter One." />
+  <meta property="og:url" content="https://onthelistseries.com/" />
+  <meta property="og:image" content="https://onthelistseries.com/assets/img/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <!-- ===================== Structured data ===================== -->
+  <!-- Organization schema (publisher of the series) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://onthelistseries.com/#organization",
+    "name": "On the List Series",
+    "url": "https://onthelistseries.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://onthelistseries.com/assets/img/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "description": "Publisher and home of the On the List novel series by Eric Brister.",
+    "email": "hello@onthelistseries.com",
+    "sameAs": [
+      "https://www.instagram.com/onthelistseries",
+      "https://www.goodreads.com/onthelistseries",
+      "https://www.tiktok.com/@onthelistseries"
+    ]
+  }
+  </script>
+
+  <!-- Author schema (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://onthelistseries.com/pages/about.html#author",
+    "name": "Eric Brister",
+    "url": "https://onthelistseries.com/pages/about.html",
+    "jobTitle": "Author",
+    "description": "Eric Brister is the author of the On the List series.",
+    "image": "https://onthelistseries.com/assets/img/author.jpg",
+    "sameAs": [
+      "https://www.goodreads.com/ericbrister",
+      "https://www.instagram.com/ericbristerwrites"
+    ],
+    "worksFor": { "@id": "https://onthelistseries.com/#organization" }
+  }
+  </script>
+
+  <!-- Book series schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BookSeries",
+    "@id": "https://onthelistseries.com/#series",
+    "name": "On the List",
+    "url": "https://onthelistseries.com/books/",
+    "author": { "@id": "https://onthelistseries.com/pages/about.html#author" },
+    "publisher": { "@id": "https://onthelistseries.com/#organization" },
+    "genre": ["Contemporary Fiction", "Romance", "Suspense"],
+    "hasPart": [
+      {
+        "@type": "Book",
+        "name": "On the List: Book One",
+        "url": "https://onthelistseries.com/books/on-the-list-book-one.html",
+        "position": 1
+      }
+    ]
+  }
+  </script>
+
+  <!-- WebSite + search action -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://onthelistseries.com/#website",
+    "url": "https://onthelistseries.com/",
+    "name": "On the List Series",
+    "publisher": { "@id": "https://onthelistseries.com/#organization" }
+  }
+  </script>
+</head>
+<body>
+  <!-- HEADER (shared markup) -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">On the <span>List</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <nav class="nav" aria-label="Primary">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/books/">Books</a>
+        <a href="/blog/">Journal</a>
+        <a href="/news/">News</a>
+        <a href="/lyrics/">Lyrics</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO: the story + the lock in the center -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">A Novel Series by Eric Brister</p>
+      <h1>On the List</h1>
+
+      <!-- The lock, dead center -->
+      <button class="lock" id="lock" aria-label="Unlock the story — flip through Chapter One">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <path class="shackle" d="M20 28v-6a12 12 0 0 1 24 0v6" fill="none" stroke="#c8a35a" stroke-width="4" stroke-linecap="round"/>
+          <rect x="14" y="28" width="36" height="28" rx="5" fill="#c8a35a"/>
+          <circle cx="32" cy="40" r="4" fill="#0d0c0f"/>
+          <rect x="30" y="42" width="4" height="9" rx="2" fill="#0d0c0f"/>
+        </svg>
+      </button>
+      <span class="lock-caption" id="lock-caption">Tap to unlock</span>
+
+      <p class="story">
+        Everyone wants their name on the list. Mara Vance spent five years
+        learning what it costs to keep it there — the favors, the silence,
+        the door that only opens from the inside. The night it finally swings
+        wide, she finds out the list was never about getting in. It was about
+        who they decide to leave out.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn" href="/books/chapter-1.html">Flip through Chapter One</a>
+        <a class="btn btn-ghost" href="/books/">Explore the books</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKS preview -->
+  <section class="section" id="books">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The Series</p>
+        <h2>The Books</h2>
+        <p>One list. One door. A story told across the people who fought to stay on the right side of it.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="book-cover"><div><div class="num">Book One</div><div class="ttl">On the List</div></div></div>
+          <h3 class="mt">On the List: Book One</h3>
+          <p>Where it begins — the night the door opens and Mara learns the price of her own name.</p>
+          <a href="/books/on-the-list-book-one.html">Read more &rarr;</a>
+        </article>
+        <article class="card">
+          <div class="book-cover"><div><div class="num">Book Two</div><div class="ttl">After Hours</div></div></div>
+          <h3 class="mt">After Hours</h3>
+          <p class="muted">Coming soon. Join the journal for the cover reveal and first pages.</p>
+          <a href="/blog/">Get notified &rarr;</a>
+        </article>
+        <article class="card">
+          <div class="book-cover"><div><div class="num">Companion</div><div class="ttl">The Lyrics</div></div></div>
+          <h3 class="mt">The Songs of the Series</h3>
+          <p>The music written for and about the world of On the List — lyrics and liner notes.</p>
+          <a href="/lyrics/">Read the lyrics &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Stay Close</p>
+        <h2>Latest from the Series</h2>
+      </div>
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="meta">News</div>
+          <h3>On the List: Book One sets its release date</h3>
+          <p>The first novel in the series gets an official date and a first look at the cover.</p>
+          <a href="/news/book-one-release-date.html">Read the announcement &rarr;</a>
+        </article>
+        <article class="card">
+          <div class="meta">Journal</div>
+          <h3>Writing the night the door opens</h3>
+          <p>A behind-the-scenes look at the chapter that started the whole series.</p>
+          <a href="/blog/writing-the-door-scene.html">Read the post &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (shared markup) -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <div class="brand">On the <span>List</span></div>
+          <p class="muted" style="max-width:280px">A novel series by Eric Brister.</p>
+        </div>
+        <div>
+          <strong>Explore</strong><br />
+          <a href="/books/">Books</a><br />
+          <a href="/blog/">Journal</a><br />
+          <a href="/news/">News</a><br />
+          <a href="/lyrics/">Lyrics</a>
+        </div>
+        <div>
+          <strong>More</strong><br />
+          <a href="/pages/about.html">About the author</a><br />
+          <a href="/pages/contact.html">Contact</a><br />
+          <a href="/sitemap.xml">Sitemap</a><br />
+          <a href="/feed.xml">RSS</a>
+        </div>
+      </div>
+      <div class="legal">&copy; 2026 On the List Series. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
