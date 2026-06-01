@@ -98,27 +98,41 @@ be valid for Google News. Prune older `<url>` entries as you publish new ones.
 Submit only the index — Google reads the rest from it:
 `https://YOURDOMAIN.com/sitemap.xml` in Google Search Console.
 
-## Deploying (GitHub Pages)
+## Deploying (auto-deploy to SiteGround)
 
-This repo ships with `.github/workflows/deploy.yml`, which publishes the site to
-GitHub Pages on every push to `main`. One-time setup:
+`.github/workflows/deploy-siteground.yml` uploads the whole site to your
+SiteGround web root over SFTP on every push to `main` (and on manual dispatch
+from the Actions tab). No manual file uploads — push and it goes live.
 
-1. **Enable Pages:** repo **Settings → Pages → Build and deployment → Source =
-   GitHub Actions**.
-2. **Trigger it:** push to `main` (or run the workflow manually from the Actions
-   tab). The first run publishes the site to
-   `https://digital-identity-architects-git.github.io/on-the-list-series/`.
-3. **Custom domain:** in **Settings → Pages → Custom domain**, enter your domain
-   and save — this writes a `CNAME` file to the repo. Then at your DNS provider:
-   - Apex domain (`example.com`): add four `A` records to GitHub's IPs
-     `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-     (and/or `AAAA` records for IPv6).
-   - `www` subdomain: add a `CNAME` record pointing to
-     `digital-identity-architects-git.github.io`.
-4. **Enforce HTTPS:** tick the box in Settings → Pages once the cert is issued.
+### One-time setup (credentials never touch the repo)
 
-> The site uses absolute root-relative links (`/assets/...`, `/books/...`), so it
-> must be served from a domain root — a custom domain (above) or an apex/`www`
-> setup. The default project URL (`.../on-the-list-series/`) serves from a
-> subpath and would break those links.
+In SiteGround **Site Tools → Devs → SSH Keys Manager / FTP Accounts**, note the
+SFTP **hostname**, create/confirm an **SFTP user + password**, and the **port**
+(SiteGround SFTP is `18765`). Then in GitHub:
+
+**Settings → Secrets and variables → Actions → Secrets** — add:
+
+| Secret | Value |
+| --- | --- |
+| `SITEGROUND_HOST` | your SiteGround SFTP hostname (e.g. `giga123.siteground.biz`) |
+| `SITEGROUND_USERNAME` | the SFTP username |
+| `SITEGROUND_PASSWORD` | the SFTP password |
+
+**Settings → Secrets and variables → Actions → Variables** (optional, only if
+defaults are wrong) — add:
+
+| Variable | Default | Notes |
+| --- | --- | --- |
+| `SITEGROUND_PORT` | `18765` | SiteGround SFTP port |
+| `SITEGROUND_REMOTE_PATH` | `public_html` | web root for the domain |
+
+Then push to `main` (or run the workflow from the **Actions** tab). The site
+deploys to the domain root, where the root-relative links (`/assets/...`,
+`/books/...`) and the `https://onthelistseries.com` canonical URLs resolve
+correctly.
+
+> **First run:** if SiteGround's placeholder still shows after deploy, delete the
+> leftover default `index.php` in `public_html` once (it can take priority over
+> our `index.html`). Also make sure **HTTPS Enforce** is on in Site Tools, since
+> all canonical/sitemap URLs use `https://`.
 
