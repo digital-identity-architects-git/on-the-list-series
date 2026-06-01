@@ -97,3 +97,28 @@ be valid for Google News. Prune older `<url>` entries as you publish new ones.
 
 Submit only the index — Google reads the rest from it:
 `https://YOURDOMAIN.com/sitemap.xml` in Google Search Console.
+
+## Deploying (GitHub Pages)
+
+This repo ships with `.github/workflows/deploy.yml`, which publishes the site to
+GitHub Pages on every push to `main`. One-time setup:
+
+1. **Enable Pages:** repo **Settings → Pages → Build and deployment → Source =
+   GitHub Actions**.
+2. **Trigger it:** push to `main` (or run the workflow manually from the Actions
+   tab). The first run publishes the site to
+   `https://digital-identity-architects-git.github.io/on-the-list-series/`.
+3. **Custom domain:** in **Settings → Pages → Custom domain**, enter your domain
+   and save — this writes a `CNAME` file to the repo. Then at your DNS provider:
+   - Apex domain (`example.com`): add four `A` records to GitHub's IPs
+     `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+     (and/or `AAAA` records for IPv6).
+   - `www` subdomain: add a `CNAME` record pointing to
+     `digital-identity-architects-git.github.io`.
+4. **Enforce HTTPS:** tick the box in Settings → Pages once the cert is issued.
+
+> The site uses absolute root-relative links (`/assets/...`, `/books/...`), so it
+> must be served from a domain root — a custom domain (above) or an apex/`www`
+> setup. The default project URL (`.../on-the-list-series/`) serves from a
+> subpath and would break those links.
+
