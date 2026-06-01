@@ -14,6 +14,9 @@ sitemap-pages.xml                  Evergreen pages + lyrics
 sitemap-books.xml                  Books + chapter reader
 sitemap-blog.xml                   Journal / blog posts
 sitemap-news.xml                   Google News sitemap (news: namespace)
+feed.xml                           Main RSS feed (Journal + News)
+blog/feed.xml                      Journal RSS feed
+news/feed.xml                      News RSS feed
 assets/
   css/style.css
   js/site.js                       Mobile nav + the front-page lock animation
@@ -60,6 +63,19 @@ block. `assets/js/flipbook.js` paginates it to fit the page, shows a two-page
 spread on desktop (single page on mobile), and flips with a 3D page-turn on
 click, arrow keys, or swipe. To change the chapter, just edit the `<p>` tags in
 `#chapter-source`.
+
+## RSS feeds
+
+Three RSS 2.0 feeds, auto-discoverable via `<link rel="alternate">` in the
+relevant page heads:
+
+- `feed.xml` — main site feed (newest Journal + News items)
+- `blog/feed.xml` — Journal only
+- `news/feed.xml` — News only
+
+Add a new `<item>` at the **top** of the channel when you publish, and update
+`<lastBuildDate>`. `pubDate` uses RFC-822 dates (e.g. `Sat, 30 May 2026
+09:00:00 -0500`).
 
 ## ⚠️ One config step: set your domain
 

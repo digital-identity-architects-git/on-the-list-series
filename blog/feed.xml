@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The Journal feed. -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>On the List — The Journal</title>
+    <link>https://onthelistseries.com/blog/</link>
+    <atom:link href="https://onthelistseries.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Process notes and behind-the-scenes posts from the On the List series.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 May 2026 09:00:00 -0500</lastBuildDate>
+    <ttl>60</ttl>
+
+    <item>
+      <title>Writing the Night the Door Opens</title>
+      <link>https://onthelistseries.com/blog/writing-the-door-scene.html</link>
+      <guid isPermaLink="true">https://onthelistseries.com/blog/writing-the-door-scene.html</guid>
+      <pubDate>Thu, 28 May 2026 09:00:00 -0500</pubDate>
+      <description>A behind-the-scenes look at drafting the opening chapter of On the List: Book One.</description>
+    </item>
+  </channel>
+</rss>
