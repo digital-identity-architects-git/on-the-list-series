@@ -262,3 +262,13 @@ p { margin: 0 0 1.1em; }
 .center { text-align: center; }
 .mt { margin-top: 2rem; }
 .muted { color: var(--bone-dim); }
+
+/* ---------- Responsive video embeds (YouTube etc.) ---------- */
+.video-embed {
+  position: relative; width: 100%; aspect-ratio: 16 / 9;
+  margin: 1.6em 0; border-radius: 6px; overflow: hidden;
+  border: 1px solid var(--rule); box-shadow: var(--shadow); background: #000;
+}
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.artist-links { font-size: .9rem; color: var(--bone-dim); margin: -0.4em 0 1.6em; }
+.artist-links a { margin-right: .25em; }

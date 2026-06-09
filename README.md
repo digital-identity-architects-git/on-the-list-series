@@ -106,17 +106,27 @@ from the Actions tab). No manual file uploads — push and it goes live.
 
 ### One-time setup (credentials never touch the repo)
 
-In SiteGround **Site Tools → Devs → SSH Keys Manager / FTP Accounts**, note the
-SFTP **hostname**, create/confirm an **SFTP user + password**, and the **port**
-(SiteGround SFTP is `18765`). Then in GitHub:
+> **Important:** SiteGround's SFTP only accepts **SSH-key** authentication. A
+> username + password is rejected with `Permission denied (publickey)` and
+> nothing uploads — this is why an early deploy failed and the domain stayed
+> blank. The workflow therefore uses a private key, not a password.
 
-**Settings → Secrets and variables → Actions → Secrets** — add:
+In SiteGround **Site Tools → Devs → SSH Keys Manager**:
+
+1. **Generate a new SSH key** (or import one). SiteGround gives you a private
+   key and a public key, and ties them to an SSH/SFTP user.
+2. Note the SFTP **hostname**, the **username**, and the **port** (SiteGround
+   SFTP is `18765`).
+3. Download/copy the **private key** (the full text, including the
+   `-----BEGIN ... PRIVATE KEY-----` / `-----END ... PRIVATE KEY-----` lines).
+
+Then in GitHub **Settings → Secrets and variables → Actions → Secrets** — add:
 
 | Secret | Value |
 | --- | --- |
 | `SITEGROUND_HOST` | your SiteGround SFTP hostname (e.g. `giga123.siteground.biz`) |
 | `SITEGROUND_USERNAME` | the SFTP username |
-| `SITEGROUND_PASSWORD` | the SFTP password |
+| `SITEGROUND_SSH_KEY` | the **full private key** text from SiteGround |
 
 **Settings → Secrets and variables → Actions → Variables** (optional, only if
 defaults are wrong) — add:

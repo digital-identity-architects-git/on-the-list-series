@@ -8,8 +8,17 @@
     <description>Books, journal, and news from the On the List series by Eric Brister.</description>
     <language>en-us</language>
     <copyright>Copyright 2026 On the List Series</copyright>
-    <lastBuildDate>Mon, 01 Jun 2026 09:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 09:00:00 -0500</lastBuildDate>
     <ttl>60</ttl>
+
+    <item>
+      <title>The Best Deutsche Rappers: 5 Artists Who Built Modern German Rap</title>
+      <link>https://on-the-list-series.com/blog/best-deutsche-rappers.html</link>
+      <guid isPermaLink="true">https://on-the-list-series.com/blog/best-deutsche-rappers.html</guid>
+      <category>Journal</category>
+      <pubDate>Tue, 09 Jun 2026 09:00:00 -0500</pubDate>
+      <description>A guide to the best Deutsche rappers — Kollegah, Kitty Kat, Capital Bra, Apache 207 and Sido — with their biggest videos and where to follow them.</description>
+    </item>
 
     <item>
       <title>On the List: Book One Sets Its Release Date</title>
