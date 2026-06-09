@@ -7,8 +7,16 @@
     <atom:link href="https://on-the-list-series.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>Process notes and behind-the-scenes posts from the On the List series.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 May 2026 09:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 09:00:00 -0500</lastBuildDate>
     <ttl>60</ttl>
+
+    <item>
+      <title>The Best Deutsche Rappers: 5 Artists Who Built Modern German Rap</title>
+      <link>https://on-the-list-series.com/blog/best-deutsche-rappers.html</link>
+      <guid isPermaLink="true">https://on-the-list-series.com/blog/best-deutsche-rappers.html</guid>
+      <pubDate>Tue, 09 Jun 2026 09:00:00 -0500</pubDate>
+      <description>A guide to the best Deutsche rappers — Kollegah, Kitty Kat, Capital Bra, Apache 207 and Sido — with their biggest videos and where to follow them.</description>
+    </item>
 
     <item>
       <title>Writing the Night the Door Opens</title>

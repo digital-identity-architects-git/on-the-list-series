@@ -1,8 +1,9 @@
 name: Deploy to SiteGround
 
 # Pushes the static site straight onto the live SiteGround hosting over SFTP
-# whenever main changes. Configure the secrets/vars below once (see README),
-# then deployment is fully automatic.
+# whenever main changes. SiteGround's SFTP requires SSH-KEY auth (it rejects
+# passwords with "Permission denied (publickey)"), so this uses a private key.
+# Configure the secrets/vars below once (see README), then deploys are automatic.
 
 on:
   push:
@@ -20,15 +21,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Copy only the site files into a clean folder so repo/dev files
+      # (.git, .github, README) never land in the web root. The action's own
+      # "exclude" input is not supported, so we filter here instead.
+      - name: Stage site files
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_site' \
+            --exclude='README.md' \
+            ./ _site/
+
       - name: Upload site over SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.5
         with:
           server: ${{ secrets.SITEGROUND_HOST }}
           username: ${{ secrets.SITEGROUND_USERNAME }}
-          password: ${{ secrets.SITEGROUND_PASSWORD }}
+          ssh_private_key: ${{ secrets.SITEGROUND_SSH_KEY }}
           port: ${{ vars.SITEGROUND_PORT || '18765' }}
-          # Everything except repo/dev files goes to the web root.
-          local_path: './*'
+          local_path: './_site/*'
           remote_path: ${{ vars.SITEGROUND_REMOTE_PATH || 'public_html' }}
           sftp_only: true
-          exclude: '.git/**,.github/**,README.md'
