@@ -106,17 +106,21 @@ from the Actions tab). No manual file uploads — push and it goes live.
 
 ### One-time setup (credentials never touch the repo)
 
-In SiteGround **Site Tools → Devs → SSH Keys Manager / FTP Accounts**, note the
-SFTP **hostname**, create/confirm an **SFTP user + password**, and the **port**
-(SiteGround SFTP is `18765`). Then in GitHub:
+SiteGround SSH/SFTP only accepts **key-based** login (a password will be
+rejected with `Permission denied (publickey)`). In SiteGround **Site Tools →
+Devs → SSH Keys Manager**, **generate a new key pair** (or import one), then
+**download / copy the PRIVATE key** — the whole block, including the
+`-----BEGIN ... PRIVATE KEY-----` / `-----END ... PRIVATE KEY-----` lines. Note
+the SFTP **hostname** and the **port** (SiteGround SFTP is `18765`). Then in
+GitHub:
 
 **Settings → Secrets and variables → Actions → Secrets** — add:
 
 | Secret | Value |
 | --- | --- |
 | `SITEGROUND_HOST` | your SiteGround SFTP hostname (e.g. `giga123.siteground.biz`) |
-| `SITEGROUND_USERNAME` | the SFTP username |
-| `SITEGROUND_PASSWORD` | the SFTP password |
+| `SITEGROUND_USERNAME` | the SSH/SFTP username from SiteGround |
+| `SITEGROUND_SSH_KEY` | the **private** key contents (full PEM block) |
 
 **Settings → Secrets and variables → Actions → Variables** (optional, only if
 defaults are wrong) — add:
