@@ -5,7 +5,9 @@ name: Deploy to SiteGround
 # then deployment is fully automatic.
 #
 # SiteGround's SSH/SFTP only accepts key-based login, so this uses an SSH
-# private key (SITEGROUND_SSH_KEY) rather than a password.
+# private key (SSH_KEY) rather than a password.
+#
+# Required repository secrets: HOSTNAME, USERNAME, SSH_KEY, PORT.
 
 on:
   push:
@@ -37,10 +39,10 @@ jobs:
       - name: Upload site over SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.5
         with:
-          server: ${{ secrets.SITEGROUND_HOST }}
-          username: ${{ secrets.SITEGROUND_USERNAME }}
-          ssh_private_key: ${{ secrets.SITEGROUND_SSH_KEY }}
-          port: ${{ vars.SITEGROUND_PORT || '18765' }}
+          server: ${{ secrets.HOSTNAME }}
+          username: ${{ secrets.USERNAME }}
+          ssh_private_key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT || '18765' }}
           local_path: './_site/*'
           remote_path: ${{ vars.SITEGROUND_REMOTE_PATH || 'public_html' }}
           sftp_only: true
