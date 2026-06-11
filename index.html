@@ -117,35 +117,98 @@
     </div>
   </header>
 
-  <!-- HERO: the story + the lock in the center -->
+  <!-- HERO: story snippets orbiting the heart that links to Amazon -->
+  <!--
+    TO POINT THE HEART AT YOUR EXACT AMAZON PAGE:
+    Replace the two href values marked AMAZON-LINK below with your book's
+    Amazon URL (e.g. https://www.amazon.com/dp/XXXXXXXXXX). Until then they
+    point at an Amazon search for the book so the button still works.
+  -->
   <section class="hero">
     <div class="hero-inner">
       <p class="eyebrow">A Novel Series by Eric Brister</p>
       <h1>On the List</h1>
-
-      <!-- The lock, dead center -->
-      <button class="lock" id="lock" aria-label="Unlock the story — flip through Chapter One">
-        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
-          <path class="shackle" d="M20 28v-6a12 12 0 0 1 24 0v6" fill="none" stroke="#c8a35a" stroke-width="4" stroke-linecap="round"/>
-          <rect x="14" y="28" width="36" height="28" rx="5" fill="#c8a35a"/>
-          <circle cx="32" cy="40" r="4" fill="#0d0c0f"/>
-          <rect x="30" y="42" width="4" height="9" rx="2" fill="#0d0c0f"/>
-        </svg>
-      </button>
-      <span class="lock-caption" id="lock-caption">Tap to unlock</span>
-
       <p class="story">
-        Everyone wants their name on the list. Mara Vance spent five years
-        learning what it costs to keep it there — the favors, the silence,
-        the door that only opens from the inside. The night it finally swings
-        wide, she finds out the list was never about getting in. It was about
-        who they decide to leave out.
+        Everyone wants their name on the list. Follow the story in snippets —
+        then press the heart to get the book.
       </p>
+    </div>
 
-      <div class="btn-row">
-        <a class="btn" href="/books/chapter-1.html">Flip through Chapter One</a>
-        <a class="btn btn-ghost" href="/books/">Explore the books</a>
-      </div>
+    <div class="heart-stage">
+      <!-- Snippets orbit the heart (desktop) / stack as a timeline (mobile) -->
+      <article class="snippet s1">
+        <div class="snippet-img" style="background-image:url('/assets/img/snippets/1.jpg'), linear-gradient(135deg,#2a2531,#14121a)"></div>
+        <div class="snippet-body">
+          <span class="beat">The Invitation</span>
+          <p>“Your name's on the list.” That was the first lie.</p>
+        </div>
+      </article>
+
+      <article class="snippet s2">
+        <div class="snippet-img" style="background-image:url('/assets/img/snippets/2.jpg'), linear-gradient(135deg,#2a2531,#14121a)"></div>
+        <div class="snippet-body">
+          <span class="beat">The Door</span>
+          <p>It only opens from the inside. Mara learned that too late.</p>
+        </div>
+      </article>
+
+      <article class="snippet s3">
+        <div class="snippet-img" style="background-image:url('/assets/img/snippets/3.jpg'), linear-gradient(135deg,#2a2531,#14121a)"></div>
+        <div class="snippet-body">
+          <span class="beat">The Favor</span>
+          <p>Nothing on the list is free. Everything is owed.</p>
+        </div>
+      </article>
+
+      <article class="snippet s4">
+        <div class="snippet-img" style="background-image:url('/assets/img/snippets/4.jpg'), linear-gradient(135deg,#2a2531,#14121a)"></div>
+        <div class="snippet-body">
+          <span class="beat">The Silence</span>
+          <p>She kept their secrets. They kept her quiet.</p>
+        </div>
+      </article>
+
+      <article class="snippet s5">
+        <div class="snippet-img" style="background-image:url('/assets/img/snippets/5.jpg'), linear-gradient(135deg,#2a2531,#14121a)"></div>
+        <div class="snippet-body">
+          <span class="beat">The Night It Opens</span>
+          <p>Five years of climbing, decided in one breath.</p>
+        </div>
+      </article>
+
+      <article class="snippet s6">
+        <div class="snippet-img" style="background-image:url('/assets/img/snippets/6.jpg'), linear-gradient(135deg,#2a2531,#14121a)"></div>
+        <div class="snippet-body">
+          <span class="beat">The List</span>
+          <p>It was never about getting in — it's about who they leave out.</p>
+        </div>
+      </article>
+
+      <!-- The heart, dead center → Amazon -->
+      <a class="heart-cta" href="https://www.amazon.com/s?k=On+the+List+Eric+Brister"
+         target="_blank" rel="noopener"
+         aria-label="Get the book On the List on Amazon"><!-- AMAZON-LINK -->
+        <svg class="heart-shape" viewBox="0 0 32 29.6" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="goldHeart" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e3c889"/>
+              <stop offset="0.55" stop-color="#c8a35a"/>
+              <stop offset="1" stop-color="#a9863f"/>
+            </linearGradient>
+          </defs>
+          <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" fill="url(#goldHeart)"/>
+        </svg>
+        <span class="heart-label">
+          <span class="small">Out Now</span>
+          <span class="big">Get the Book</span>
+          <span class="amazon">on Amazon &rarr;</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn" href="https://www.amazon.com/s?k=On+the+List+Eric+Brister" target="_blank" rel="noopener"><!-- AMAZON-LINK -->Buy on Amazon</a>
+      <a class="btn btn-ghost" href="/books/chapter-1.html">Flip through Chapter One</a>
     </div>
   </section>
 
