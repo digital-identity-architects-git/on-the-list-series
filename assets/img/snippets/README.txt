@@ -10,7 +10,7 @@ lines up with its caption:
   3.jpg  ->  "Instant Connection"  (Dozier the puppy / living room)
   4.jpg  ->  "The Lake"            (beach campfire)
   5.jpg  ->  "Go-Karts, Redux"     (go-kart track)
-  6.jpg  ->  "Theory Class, IRL"   (music theory lecture)
+  6.jpg  ->  "Theory Class"        (Eddie's wisecrack, Ginnie laughing)
 
 Landscape images look best (roughly 600x400). Until a file exists, that snippet
 shows a soft gold-on-ink gradient, so the page always looks finished.
